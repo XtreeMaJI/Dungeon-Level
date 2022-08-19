@@ -14,10 +14,10 @@ public class HexCellConstructor : MonoBehaviour
     public float radius = 2f;
     public float borderWidth = 0.5f; //Значение от нуля до единицы. При единице весь шестиугольник будет зарисован
 
-    private void Start()
+    public void UpdateMesh()
     {
-        Mesh mesh = GetComponent<MeshFilter>().mesh;
-
+        Mesh mesh = new Mesh();
+        GetComponent<MeshFilter>().sharedMesh = mesh;
         mesh.Clear();
 
         //Вычисляем координаты вершин шестиугольника и добавляем их в меш
@@ -30,40 +30,27 @@ public class HexCellConstructor : MonoBehaviour
 
         //Добавляем индексы вершин в массив треугольников, чтобы пара треугольников образовывала трапецию
         List<int> triangles = new List<int>();
-        for (int i = 0; i < TRAPEZIES_COUNT; i++)
+        for (int pointIdx = 0; pointIdx < TRAPEZIES_COUNT; pointIdx++)
         {
-            if (i + 1 != vertices.Count / 2)
+            int nextPointIdx = (pointIdx + 1) % TRAPEZIES_COUNT;
+
             {
                 List<int> firstTriangle = new List<int>();
-                firstTriangle.Add(i);
-                firstTriangle.Add(i + 1);
-                firstTriangle.Add(i + vertices.Count / 2);
+                firstTriangle.Add(pointIdx);
+                firstTriangle.Add(nextPointIdx);
+                firstTriangle.Add(pointIdx + vertices.Count / 2);
                 triangles.AddRange(firstTriangle);
 
                 List<int> secondTriangle = new List<int>();
-                secondTriangle.Add(i + 1);
-                secondTriangle.Add(i + 1 + vertices.Count / 2);
-                secondTriangle.Add(i + vertices.Count / 2);
-                triangles.AddRange(secondTriangle);
-            }
-            else
-            {
-                //Последняя трапеция
-                List<int> firstTriangle = new List<int>();
-                firstTriangle.Add(i);
-                firstTriangle.Add(0);
-                firstTriangle.Add(i + vertices.Count / 2);
-                triangles.AddRange(firstTriangle);
-
-                List<int> secondTriangle = new List<int>();
-                secondTriangle.Add(0);
-                secondTriangle.Add(vertices.Count / 2);
-                secondTriangle.Add(i + vertices.Count / 2);
+                secondTriangle.Add(nextPointIdx);
+                secondTriangle.Add(nextPointIdx + vertices.Count / 2);
+                secondTriangle.Add(pointIdx + vertices.Count / 2);
                 triangles.AddRange(secondTriangle);
             }
         }
 
         mesh.triangles = triangles.ToArray();
+
         mesh.RecalculateNormals();
     }
 

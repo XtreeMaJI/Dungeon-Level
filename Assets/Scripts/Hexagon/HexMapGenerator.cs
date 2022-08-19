@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class HexMap : MonoBehaviour
+[ExecuteInEditMode]
+public class HexMapGenerator : MonoBehaviour
 {
     private const float ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT = 30f;
 
-    public HexCell hexCellTemplate; 
+    public HexCell hexCellTemplate;
 
     public float verticalBorderShift = 0f;
     public float horizontalBorderShift = 0f;
@@ -17,7 +18,8 @@ public class HexMap : MonoBehaviour
 
     private List<HexCell> cellsList = new List<HexCell>();
 
-    private float cellRadius = 0f;
+    public float cellRadius = 0f;
+    public float filledBorderPart = 0f; //Толщина границы в процентах
     private float halfCellWidth = 0f;
 
     private float horizontalCellOffset = 0f;
@@ -25,38 +27,54 @@ public class HexMap : MonoBehaviour
 
     private int currentRow = 1;
 
-    void Start()
+    public bool recalculateMap = false;
+
+    void Update()
     {
-        var hexCellConstr = hexCellTemplate.GetComponent<HexCellConstructor>();
-        cellRadius = hexCellConstr.radius;
+        if (recalculateMap == false)
+            return;
+
+        recalculateMap = false;
+
+        if (cellRadius <= 0f || filledBorderPart <= 0f || filledBorderPart >= 1f)
+            return;
+
+        DestroyAllCells();
         halfCellWidth = cellRadius * Mathf.Cos(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
-        float cellBorderWidth = hexCellConstr.borderWidth * cellRadius;
+        float cellBorderWidth = filledBorderPart * cellRadius;
         float halfCellSideLen = cellRadius * Mathf.Sin(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
 
         horizontalCellOffset = 2f * halfCellWidth - cellBorderWidth;
         verticalCellOffset = cellRadius + halfCellSideLen - cellBorderWidth;
 
-        Vector3 cellPos; 
-        while(CanCreateCell(out cellPos))
+        Vector3 cellPos;
+        while (CanCreateCell(out cellPos))
         {
+            cellPos += this.transform.position;
             CreateCell(cellPos);
         }
     }
 
-    void CreateCell(Vector3 pos)
+    private void CreateCell(Vector3 pos)
     {
-        cellsList.Add(Instantiate(hexCellTemplate, pos, Quaternion.identity));
+        HexCell newCell = Instantiate(hexCellTemplate, pos, Quaternion.identity);
+        cellsList.Add(newCell);
+        newCell.transform.parent = this.transform;
+        var newCellConstr = newCell.GetComponent<HexCellConstructor>();
+        newCellConstr.borderWidth = filledBorderPart;
+        newCellConstr.radius = cellRadius;
+        newCellConstr.UpdateMesh();
     }
 
-    bool CanCreateCell(out Vector3 pos)
+    private bool CanCreateCell(out Vector3 pos)
     {
         if (cellsList.Count == 0)
         {
             pos = new Vector3(horizontalBorderShift, 0, verticalBorderShift);
             return true;
         }
-            
-        pos = cellsList.Last().gameObject.transform.position;
+
+        pos = cellsList.Last().gameObject.transform.position - this.transform.position;
         pos.x += horizontalCellOffset;
         //Пытаемся создать ячейку справа
         if (pos.x < mapWidth - horizontalBorderShift)
@@ -79,6 +97,20 @@ public class HexMap : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void DestroyAllCells()
+    {
+        cellsList.RemoveAll(x => x == null);
+        foreach (var cell in cellsList)
+            DestroyImmediate(cell.gameObject);
+
+        cellsList.Clear();
+
+        foreach (Transform child in transform)
+            DestroyImmediate(child.gameObject);
+
+        currentRow = 1;
     }
 
 }

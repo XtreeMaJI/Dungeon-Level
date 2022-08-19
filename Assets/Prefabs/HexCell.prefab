@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  borderWidth: 0.05
+  borderWidth: 0.2
 --- !u!114 &357680240269083018
 MonoBehaviour:
   m_ObjectHideFlags: 0
