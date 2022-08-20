@@ -11,7 +11,7 @@ public class HexMap : MonoBehaviour
 
     private void Start()
     {
-        cellsList = GetComponent<HexMapGenerator>().GetCellsList();
+        List<HexCell> cellsList = GetComponent<HexMapGenerator>().GetCellsList();
 
         foreach (HexCell cell in cellsList)
         {
@@ -21,6 +21,7 @@ public class HexMap : MonoBehaviour
 
     public HexCell GetClosestCellToPos(Vector3 pos)
     {
+        List<HexCell> cellsList = GetComponent<HexMapGenerator>().GetCellsList();
         HexCell closestCell = null;
         if (cellsList.Count == 0)
             return null;
