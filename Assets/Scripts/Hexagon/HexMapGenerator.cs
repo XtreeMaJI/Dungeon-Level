@@ -16,8 +16,6 @@ public class HexMapGenerator : MonoBehaviour
     public float mapWidth = 1f;
     public float mapLen = 1f;
 
-    private List<HexCell> cellsList = new List<HexCell>();
-
     public float cellRadius = 0f;
     public float filledBorderPart = 0f; //Толщина границы в процентах
     private float halfCellWidth = 0f;
@@ -27,32 +25,18 @@ public class HexMapGenerator : MonoBehaviour
 
     private int currentRow = 1;
 
-    public bool recalculateMap = false;
+    public bool shouldRecalculateMap = false;
+
+    private List<HexCell> cellsList = new List<HexCell>();
 
     void Update()
     {
-        if (recalculateMap == false)
+        if (!shouldRecalculateMap)
             return;
 
-        recalculateMap = false;
+        shouldRecalculateMap = false;
 
-        if (cellRadius <= 0f || filledBorderPart <= 0f || filledBorderPart >= 1f)
-            return;
-
-        DestroyAllCells();
-        halfCellWidth = cellRadius * Mathf.Cos(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
-        float cellBorderWidth = filledBorderPart * cellRadius;
-        float halfCellSideLen = cellRadius * Mathf.Sin(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
-
-        horizontalCellOffset = 2f * halfCellWidth - cellBorderWidth;
-        verticalCellOffset = cellRadius + halfCellSideLen - cellBorderWidth;
-
-        Vector3 cellPos;
-        while (CanCreateCell(out cellPos))
-        {
-            cellPos += this.transform.position;
-            CreateCell(cellPos);
-        }
+        RecalculateMap();
     }
 
     private void CreateCell(Vector3 pos)
@@ -111,6 +95,36 @@ public class HexMapGenerator : MonoBehaviour
             DestroyImmediate(child.gameObject);
 
         currentRow = 1;
+    }
+
+    private void RecalculateMap()
+    {
+        if (cellRadius <= 0f || filledBorderPart <= 0f || filledBorderPart >= 1f)
+            return;
+
+        DestroyAllCells();
+        halfCellWidth = cellRadius * Mathf.Cos(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
+        float cellBorderWidth = filledBorderPart * cellRadius;
+        float halfCellSideLen = cellRadius * Mathf.Sin(Mathf.Deg2Rad * ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT);
+
+        horizontalCellOffset = 2f * halfCellWidth - cellBorderWidth;
+        verticalCellOffset = cellRadius + halfCellSideLen - cellBorderWidth;
+
+        Vector3 cellPos;
+        while (CanCreateCell(out cellPos))
+        {
+            cellPos += this.transform.position;
+            CreateCell(cellPos);
+        }
+    }
+
+    public List<HexCell> GetCellsList()
+    {
+        //Возможно, был перезапуск и список пуст
+        if (cellsList.Count == 0)
+            RecalculateMap();
+
+        return new List<HexCell>(cellsList);
     }
 
 }
