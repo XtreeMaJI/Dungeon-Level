@@ -18,6 +18,9 @@ public class PlayerInputHandler : MonoBehaviour
         if (cell && !cell.surroundingCells.Contains(playerObject.currentCell))
             return;
 
+        if (cell.isBlockedByWall)
+            return;
+
         playerObject.TryMoveToCell(cell);
     }
 

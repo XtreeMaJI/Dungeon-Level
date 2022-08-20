@@ -10,6 +10,7 @@ public class HexCellConstructor : MonoBehaviour
     private const int TRAPEZIES_COUNT = 6;
     private const int OUTER_VERTICES_COUNT = 6;
     private const int ANGLE_BETWEEN_VERTICES = 60;
+    private const float COLLIDER_HEIGHT = 0.25f;
 
     public float radius = 2f;
     public float borderWidth = 0.5f; //Значение от нуля до единицы. При единице весь шестиугольник будет зарисован
@@ -81,4 +82,5 @@ public class HexCellConstructor : MonoBehaviour
 
         return vertices;
     }
+
 }
