@@ -24,7 +24,7 @@ public class HexCell : MonoBehaviour
         Physics.OverlapSphereNonAlloc(transform.position, radius / 2, colliders);
         foreach(var collider in colliders)
         {
-            if (collider.tag == "Wall")
+            if (collider && collider.tag == "Wall")
                 isBlockedByWall = true;
         }
     }

@@ -6,7 +6,7 @@ using System.Linq;
 [RequireComponent(typeof(HexMapGenerator))]
 public class HexMap : MonoBehaviour
 {
-    private List<HexCell> cellsList;
+    private List<HexCell> cellsList = new List<HexCell>();
     private HexMapGenerator hexMapGenerator;
 
     private void Start()
@@ -22,6 +22,9 @@ public class HexMap : MonoBehaviour
     public HexCell GetClosestCellToPos(Vector3 pos)
     {
         HexCell closestCell = null;
+        if (cellsList.Count == 0)
+            return null;
+
         closestCell = cellsList.OrderBy(cell => (cell.transform.position - pos).magnitude).First();
 
         return closestCell;
