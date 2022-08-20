@@ -4,9 +4,11 @@ using System.Linq;
 using UnityEngine;
 
 [ExecuteInEditMode]
+[RequireComponent(typeof(BoxCollider))]
 public class HexMapGenerator : MonoBehaviour
 {
     private const float ANGLE_BETWEEN_HEX_RADIUS_AND_HEIGHT = 30f;
+    private const float COLLIDER_HEIGHT = 0.25f;
 
     public HexCell hexCellTemplate;
 
@@ -44,6 +46,7 @@ public class HexMapGenerator : MonoBehaviour
         HexCell newCell = Instantiate(hexCellTemplate, pos, Quaternion.identity);
         cellsList.Add(newCell);
         newCell.transform.parent = this.transform;
+
         var newCellConstr = newCell.GetComponent<HexCellConstructor>();
         newCellConstr.borderWidth = filledBorderPart;
         newCellConstr.radius = cellRadius;
@@ -116,13 +119,25 @@ public class HexMapGenerator : MonoBehaviour
             cellPos += this.transform.position;
             CreateCell(cellPos);
         }
+
+        //пересчитываем границы коллайдера
+        BoxCollider boxCollider = GetComponent<BoxCollider>();
+        boxCollider.size = new Vector3(mapWidth + cellRadius, COLLIDER_HEIGHT, mapLen + cellRadius);
+        boxCollider.center = new Vector3((mapWidth - cellRadius) / 2, 0, (mapLen - cellRadius) / 2);
     }
 
     public List<HexCell> GetCellsList()
     {
         //Возможно, был перезапуск и список пуст
         if (cellsList.Count == 0)
-            RecalculateMap();
+        {
+            foreach(Transform child in transform)
+            {
+                HexCell hexCell = child.GetComponent<HexCell>();
+                if(hexCell)
+                    cellsList.Add(hexCell);
+            }
+        }
 
         return new List<HexCell>(cellsList);
     }

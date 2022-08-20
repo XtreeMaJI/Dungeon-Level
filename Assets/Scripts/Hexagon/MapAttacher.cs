@@ -5,9 +5,15 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(HexMapGenerator))]
+[RequireComponent(typeof(HexMap))]
 public class MapAttacher : MonoBehaviour
 {
     public bool shouldAttachObjects = false;
+
+    private void Start()
+    {
+        attachAllAttachableObjects();
+    }
 
     void Update()
     {
@@ -18,14 +24,16 @@ public class MapAttacher : MonoBehaviour
         attachAllAttachableObjects();
     }
 
-    public void attachObject(Transform objTransform)
+    public void attachObject(MapAttachableObject obj)
     {
-        List<HexCell> cellsList = GetComponent<HexMapGenerator>().GetCellsList();
-        HexCell closestCell = cellsList.OrderBy(cell => (cell.transform.position - objTransform.position).magnitude).First();
+        if (!obj)
+            return;
 
-        Vector3 newObjPos = closestCell.transform.position;
-        newObjPos.y = objTransform.position.y;
-        objTransform.position = newObjPos;
+        HexMap hexMap = GetComponent<HexMap>();
+        if (!hexMap)
+            return;
+        HexCell closestCell = hexMap.GetClosestCellToPos(obj.transform.position);
+        obj.TryMoveToCell(closestCell);
     }
 
     public void attachAllAttachableObjects()
@@ -33,7 +41,7 @@ public class MapAttacher : MonoBehaviour
         var objectsList = FindObjectsOfType<MapAttachableObject>();
         foreach(var obj in objectsList)
         {
-            attachObject(obj.transform);
+            attachObject(obj);
         }
     }
 
