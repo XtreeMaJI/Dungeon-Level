@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &299662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &10510534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &11954377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &15362448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &28802201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,6 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &28835937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,6 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &36158861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1455,6 +1462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &41212957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,6 +1576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &44259175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,6 +2018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &64759559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3106,6 +3116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &100251124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3219,6 +3230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &108166258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3332,6 +3344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &113512804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,6 +3409,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113512801}
   m_Mesh: {fileID: 1495727145}
+--- !u!1 &116657470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116657472}
+  - component: {fileID: 116657471}
+  m_Layer: 0
+  m_Name: TurnsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &116657471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116657470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338585fd7cc4d7c4f8028c949f3a285e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &116657472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116657470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.31364, y: 3.3480241, z: -5.7297516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &128424307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &128424310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4050,6 +4108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &144049148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4163,6 +4222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &147509697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4276,6 +4336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &150108434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4553,6 +4614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &163245794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,6 +4728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &166309335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,6 +5006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &173813068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,6 +5120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &178823989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,6 +5234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &183404401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5610,6 +5676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &197091456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5887,6 +5954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &210053365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6000,6 +6068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &224548216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6441,6 +6510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &241645573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6554,6 +6624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &247523171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7392,6 +7463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &280751152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7505,6 +7577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 1867706846}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &285164623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7782,6 +7855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &289182048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7895,6 +7969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &296903031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8008,6 +8083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &300590951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8121,6 +8197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &308861881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8234,6 +8311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &314346685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8839,6 +8917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &340075533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8952,6 +9031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &347609002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9518,6 +9598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &355559566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9631,6 +9712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &359846838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9908,6 +9990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &365286577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10021,6 +10104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &367127087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10298,6 +10382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &379916410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10575,6 +10660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &385522463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10688,6 +10774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &404239499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10801,6 +10888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &407067313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11078,6 +11166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &411143659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11847,6 +11936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &447080597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12124,6 +12214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &470466637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12401,6 +12492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &478738285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12678,6 +12770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &495193667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12955,6 +13048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &503841884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13232,6 +13326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &513973839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13509,6 +13604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &526880508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13732,6 +13828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &542543387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13845,6 +13942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &551459005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14286,6 +14384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &563360918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14399,6 +14498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &565255147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14512,6 +14612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &575022132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14625,6 +14726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &575367057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14902,6 +15004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &582430554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15179,6 +15282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &597351189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15292,6 +15396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &598010028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16225,6 +16330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &613778460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16994,6 +17100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &646157341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17271,6 +17378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &651337651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17384,6 +17492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &655503179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17661,6 +17770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &665086809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17938,6 +18048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &671832244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18379,6 +18490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &684955872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18492,6 +18604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &691509491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18605,6 +18718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &699918857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19320,6 +19434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &715893972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19433,6 +19548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &716426641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19546,6 +19662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &725105920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19659,6 +19776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 534340829}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &730228488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19772,6 +19890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &731042274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19885,6 +20004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &731938176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20162,6 +20282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 714982673}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &748971815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20439,6 +20560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &755065144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21630,6 +21752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &814593677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21743,6 +21866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &816087466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22020,6 +22144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &819393652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22133,6 +22258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &825373687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22410,6 +22536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &843907104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22523,6 +22650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &845485864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23292,6 +23420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &868781784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23569,6 +23698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &875025445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23682,6 +23812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &875641946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23959,6 +24090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &882228229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24072,6 +24204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &882509792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24677,6 +24810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &914308084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24790,6 +24924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &925012862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25395,6 +25530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &949921000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25508,6 +25644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &954695170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25621,6 +25758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &954823266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26226,6 +26364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &959705011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26339,6 +26478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &976685684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26452,6 +26592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &982547423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26565,6 +26706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &984125440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27498,6 +27640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1026243597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28103,6 +28246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 1516121024}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1073376217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28216,6 +28360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1076768035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28329,6 +28474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1084578315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28770,6 +28916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1113832124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28883,6 +29030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1119629268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28996,6 +29144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1130317163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29765,6 +29914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1176451087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30370,6 +30520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1209391575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30811,6 +30962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1228129681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30924,6 +31076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1233766631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31037,6 +31190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1242579023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31150,6 +31304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1248545791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31427,6 +31582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1254524826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32196,6 +32352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1280114004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32309,6 +32466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1281512763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32422,6 +32580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1281888374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32535,6 +32694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1281975608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32648,6 +32808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1285805297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33089,6 +33250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1300885663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33202,6 +33364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1301474648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33315,6 +33478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1304708323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33428,6 +33592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1307634153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33541,6 +33706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1310594752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33654,6 +33820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1318504134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33931,6 +34098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1328760775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34536,6 +34704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1346656157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34649,6 +34818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1350034668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34762,6 +34932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1353868418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34875,6 +35046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1368352627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34988,6 +35160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1372776611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35101,6 +35274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1380394510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35378,6 +35552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1389799094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35819,6 +35994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1405642138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36260,6 +36436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1430095959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36373,6 +36550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1433537796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36814,6 +36992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1463268122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37583,6 +37762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1503317634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38488,6 +38668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1522099550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38601,6 +38782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1525280160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38714,6 +38896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1533668560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38991,6 +39174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1541639842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39104,6 +39288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1544348066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39217,6 +39402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1553793185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39658,6 +39844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1566949410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39771,6 +39958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1568945422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40704,6 +40892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1594245279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40817,6 +41006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1595030754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41094,6 +41284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1632493373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41371,6 +41562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1638929090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41484,6 +41676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1642022532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41761,6 +41954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1651804383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42038,6 +42232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1661395661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42315,6 +42510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1664716589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42428,6 +42624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1672917366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42705,6 +42902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1677796580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42982,6 +43180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1685658258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43095,6 +43294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1685712288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43536,6 +43736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1713284523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43649,6 +43850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1714013745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43926,6 +44128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1720690855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44039,6 +44242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1722907941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44152,6 +44356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1725075799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44429,6 +44634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1729837819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44542,6 +44748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1744656677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44819,6 +45026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1754640207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45424,6 +45632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1767440233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45865,6 +46074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1786540543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46257,6 +46467,116 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1795491366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795491371}
+  - component: {fileID: 1795491370}
+  - component: {fileID: 1795491369}
+  - component: {fileID: 1795491368}
+  - component: {fileID: 1795491367}
+  m_Layer: 0
+  m_Name: Player (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795491367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795491366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59fb6e85072a881419369489de562c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1795491368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795491366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1795491369
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795491366}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1795491370
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795491366}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1795491371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795491366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.544224, y: 0.504, z: 2.025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1803401517
 Mesh:
   m_ObjectHideFlags: 0
@@ -46634,6 +46954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1807250750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46747,6 +47068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1810179718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46860,6 +47182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1811129775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47137,6 +47460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1813024892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47250,6 +47574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1821550651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47625,6 +47950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1836433772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47738,6 +48064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1837470383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47851,6 +48178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1842755947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47964,6 +48292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1851337196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48679,6 +49008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1868388969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48792,6 +49122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1880683948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48905,6 +49236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1881722767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49018,6 +49350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1890090549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49295,6 +49628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1905299329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49898,8 +50232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4dde37042401e4ea66310359f04509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objInCell: {fileID: 0}
+  objInCell: {fileID: 1795491367}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1927450412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50505,6 +50840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1950722978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50618,6 +50954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1952960963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50731,6 +51068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1958445085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51172,6 +51510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &1987557694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51613,6 +51952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2001373138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51726,6 +52066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2008819712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52495,6 +52836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2038020758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52608,6 +52950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2040023809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53377,6 +53720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2073663880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53490,6 +53834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2077985983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53931,6 +54276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2081424719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54044,6 +54390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2086675458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54405,6 +54752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2118471716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54846,6 +55194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objInCell: {fileID: 0}
   surroundingCells: []
+  isBlockedByWall: 0
 --- !u!114 &2138426533
 MonoBehaviour:
   m_ObjectHideFlags: 0

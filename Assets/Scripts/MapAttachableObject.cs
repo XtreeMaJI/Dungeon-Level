@@ -14,6 +14,9 @@ public class MapAttachableObject : MonoBehaviour
         if(cell.objInCell && cell.objInCell != this)
             return false;
 
+        if (cell.isBlockedByWall)
+            return false;
+
         Vector3 newPos = cell.transform.position;
         newPos.y = transform.position.y;
         transform.position = newPos;

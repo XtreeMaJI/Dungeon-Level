@@ -47,4 +47,9 @@ public class HexCell : MonoBehaviour
 
     }
 
+    public bool IsFree()
+    {
+        return objInCell == null && !isBlockedByWall;
+    }
+
 }

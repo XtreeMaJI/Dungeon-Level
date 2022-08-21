@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class TurnsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Turn
     {
-        
+        Player = 0,
+        Enemy = 1
     }
 
-    // Update is called once per frame
-    void Update()
+    public Turn currentTurn { get; private set; }
+
+    private void Start()
     {
-        
+        currentTurn = Turn.Player;
     }
+
+    public void SwitchTurn()
+    {
+        if (currentTurn == Turn.Player)
+            currentTurn = Turn.Enemy;
+        else
+            currentTurn = Turn.Player;
+    }
+
 }

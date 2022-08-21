@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MapAttachableObject))]
+[RequireComponent(typeof(Player))]
 [RequireComponent(typeof(PlayerInputHandler))]
 public class PlayerInput : MonoBehaviour
 {
