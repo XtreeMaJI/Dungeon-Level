@@ -8,11 +8,13 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private Player player;
     private TurnsManager turnsManager;
+    private LevelManager levelManager;
 
     void Start()
     {
         player = GetComponent<Player>();
         turnsManager = FindObjectOfType<TurnsManager>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     public void InteractWithCell(HexCell cell)
@@ -31,7 +33,12 @@ public class PlayerInputHandler : MonoBehaviour
             player.Attack((cell.objInCell as Enemy));
             turnsManager.SwitchTurn();
         }
-            
+
+        if (cell.objInCell is DungeonEntrance)
+        {
+            (player.UI as PlayerUI).ShowLeavePanel();
+        }
+
     }
 
 }

@@ -13,6 +13,7 @@ public abstract class Character : MapAttachableObject
     public virtual void Start()
     {
         health = maxHealth;
+        UI.SetHealth(health, maxHealth);
     }
 
     public virtual void TakeDamage(float damage)
