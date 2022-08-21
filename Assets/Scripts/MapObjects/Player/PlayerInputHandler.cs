@@ -46,6 +46,12 @@ public class PlayerInputHandler : MonoBehaviour
             }
         }
 
+        if(cell.objInCell is Chest)
+        {
+            (cell.objInCell as Chest).OpenChest(player);
+            turnsManager.SwitchTurn();
+        }
+
     }
 
 }

@@ -8,6 +8,7 @@ public class BaseUI : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public Image healthBar;
+    public TextMeshProUGUI damageText;
 
     public void SetHealth(float health, float maxHealth)
     {

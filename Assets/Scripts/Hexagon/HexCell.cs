@@ -21,7 +21,7 @@ public class HexCell : MonoBehaviour
         float radius = GetComponent<HexCellConstructor>().radius;
         int maxColliders = 5;
         Collider[] colliders = new Collider[maxColliders];
-        Physics.OverlapSphereNonAlloc(transform.position, radius / 2, colliders);
+        Physics.OverlapSphereNonAlloc(transform.position, radius, colliders);
         foreach(var collider in colliders)
         {
             if (collider && collider.tag == "Wall")

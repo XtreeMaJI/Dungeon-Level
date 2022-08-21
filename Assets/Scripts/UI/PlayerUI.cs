@@ -59,4 +59,10 @@ public class PlayerUI : BaseUI
         ShowGamePanel();
     }
 
+    public void SetDamage(float damage)
+    {
+        if (damageText)
+            damageText.SetText("Damage: " + damage.ToString());
+    }
+
 }
