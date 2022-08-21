@@ -13,9 +13,9 @@ public class LevelManager : MonoBehaviour
         enemiesController = FindObjectOfType<EnemiesController>();
     }
 
-    public bool CheckForWin()
+    public bool IsWin()
     {
-        return enemiesController.IsEnemiesRemained();
+        return !enemiesController.IsEnemiesRemained();
     }
 
     public void GameWin()
