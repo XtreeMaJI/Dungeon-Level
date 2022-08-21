@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MapAttachableObject
+public abstract class Character : MapAttachableObject
 {
     public float maxHealth;
     private float health;
@@ -23,7 +23,7 @@ public class Character : MapAttachableObject
             UI.SetHealth(health, maxHealth);
 
         if (health <= 0)
-            Destroy(gameObject);
+            OnZeroHealth();
     }
 
     public void Attack(Character target)
@@ -31,4 +31,7 @@ public class Character : MapAttachableObject
         if(target)
             target.TakeDamage(damage);
     }
+
+    public abstract void OnZeroHealth(); 
+
 }

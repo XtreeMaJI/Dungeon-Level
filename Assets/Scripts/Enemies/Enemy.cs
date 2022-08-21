@@ -35,4 +35,8 @@ public class Enemy : Character
 
     }
 
+    public override void OnZeroHealth()
+    {
+        Destroy(gameObject);
+    }
 }

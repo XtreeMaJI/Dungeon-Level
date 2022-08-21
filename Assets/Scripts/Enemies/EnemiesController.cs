@@ -30,4 +30,17 @@ public class EnemiesController : MonoBehaviour
         turnsManager.SwitchTurn();
     }
 
+    public bool IsEnemiesRemained()
+    {
+        foreach(var enemy in enemies)
+        {
+            if (enemy != null)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }

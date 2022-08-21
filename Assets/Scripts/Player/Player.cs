@@ -6,9 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInputHandler))]
 public class Player : Character
 {
+    private LevelManager levelManager;
+
     public override void Start()
     {
         base.Start();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
+    public override void OnZeroHealth()
+    {
+        levelManager?.GameOver();
+    }
 }
