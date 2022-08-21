@@ -30,7 +30,12 @@ public class Enemy : Character
         //ƒвигаемс€ по найденному пути, если такой путь есть
         if(path.Count != 0)
         {
+            Vector3 lookDir = path.First().transform.position;
+            lookDir.y = transform.position.y;
+            transform.LookAt(lookDir);
+
             TryMoveToCell(path.First());
+
         }
 
     }
@@ -39,4 +44,5 @@ public class Enemy : Character
     {
         Destroy(gameObject);
     }
+
 }

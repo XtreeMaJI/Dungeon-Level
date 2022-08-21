@@ -26,4 +26,5 @@ public class Player : Character
         if(UI)
             (UI as PlayerUI).SetDamage(damage);
     }
+
 }

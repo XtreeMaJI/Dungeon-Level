@@ -10,10 +10,13 @@ public abstract class Character : MapAttachableObject
 
     public BaseUI UI;
 
+    private Animator animator;
+
     public virtual void Start()
     {
         health = maxHealth;
         UI.SetHealth(health, maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     public virtual void TakeDamage(float damage)
@@ -30,7 +33,19 @@ public abstract class Character : MapAttachableObject
     public void Attack(Character target)
     {
         if(target)
+        {
             target.TakeDamage(damage);
+            transform.LookAt(target.transform);
+
+            if (animator)
+                animator.SetBool("IsAttack", true);
+        }
+    }
+
+    public void OnAttackEnd()
+    {
+        if(animator)
+            animator.SetBool("IsAttack", false);
     }
 
     public abstract void OnZeroHealth(); 

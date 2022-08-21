@@ -25,7 +25,9 @@ public class PlayerInputHandler : MonoBehaviour
         if (cell && !cell.surroundingCells.Contains(player.currentCell))
             return;
 
-        if(player.TryMoveToCell(cell))
+        transform.LookAt(cell.transform);
+
+        if (player.TryMoveToCell(cell))
             turnsManager.SwitchTurn();
 
         if (cell.objInCell is Enemy)
