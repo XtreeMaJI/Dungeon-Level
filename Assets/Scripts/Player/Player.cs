@@ -4,7 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerInputHandler))]
-public class Player : MapAttachableObject
+public class Player : Character
 {
-   
+    public override void Start()
+    {
+        base.Start();
+    }
+
 }

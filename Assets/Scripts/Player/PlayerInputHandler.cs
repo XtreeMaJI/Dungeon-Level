@@ -6,12 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputHandler : MonoBehaviour
 {
-    private Player playerObject;
+    private Player player;
     private TurnsManager turnsManager;
 
     void Start()
     {
-        playerObject = GetComponent<Player>();
+        player = GetComponent<Player>();
         turnsManager = FindObjectOfType<TurnsManager>();
     }
 
@@ -20,11 +20,18 @@ public class PlayerInputHandler : MonoBehaviour
         if (turnsManager.currentTurn != TurnsManager.Turn.Player)
             return;
 
-        if (cell && !cell.surroundingCells.Contains(playerObject.currentCell))
+        if (cell && !cell.surroundingCells.Contains(player.currentCell))
             return;
 
-        if(playerObject.TryMoveToCell(cell))
+        if(player.TryMoveToCell(cell))
             turnsManager.SwitchTurn();
+
+        if (cell.objInCell is Enemy)
+        {
+            player.Attack((cell.objInCell as Enemy));
+            turnsManager.SwitchTurn();
+        }
+            
     }
 
 }
