@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurnsManager : MonoBehaviour
 {
+    private LevelManager levelManager;
+
     public enum Turn
     {
         Player = 0,
@@ -15,6 +17,7 @@ public class TurnsManager : MonoBehaviour
     private void Start()
     {
         currentTurn = Turn.Player;
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     public void SwitchTurn()
@@ -23,6 +26,9 @@ public class TurnsManager : MonoBehaviour
             currentTurn = Turn.Enemy;
         else
             currentTurn = Turn.Player;
+
+        if(levelManager)
+            levelManager.RestartTimer();
     }
 
 }

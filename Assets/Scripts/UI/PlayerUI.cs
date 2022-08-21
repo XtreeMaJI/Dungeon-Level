@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerUI : BaseUI
@@ -10,6 +11,8 @@ public class PlayerUI : BaseUI
     public GameObject winPanel;
     public GameObject losePanel;
     public GameObject leavePanel;
+
+    public TextMeshProUGUI remainTimeText;
 
     public void Start()
     {
@@ -63,6 +66,11 @@ public class PlayerUI : BaseUI
     {
         if (damageText)
             damageText.SetText("Damage: " + damage.ToString());
+    }
+
+    public void SetRemainTime(int remainTime)
+    {
+        remainTimeText.SetText(remainTime.ToString());
     }
 
 }
