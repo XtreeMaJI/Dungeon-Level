@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 [RequireComponent(typeof(HexMapGenerator))]
+[RequireComponent(typeof(MapAttacher))]
 public class HexMap : MonoBehaviour
 {
     private List<HexCell> cellsList = new List<HexCell>();

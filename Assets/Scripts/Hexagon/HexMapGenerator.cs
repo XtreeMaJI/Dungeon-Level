@@ -31,6 +31,11 @@ public class HexMapGenerator : MonoBehaviour
 
     private List<HexCell> cellsList = new List<HexCell>();
 
+    private void Start()
+    {
+        shouldRecalculateMap = false;
+    }
+
     void Update()
     {
         if (!shouldRecalculateMap)
